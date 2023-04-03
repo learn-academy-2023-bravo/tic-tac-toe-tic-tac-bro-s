@@ -7,6 +7,8 @@ const App = () => {
 
   const [turn, setTurn] = useState("x");
 
+  const [winner, setWinner] = useState()
+
   const checkPositions = (i1, i2, i3, arr) => {
       // checks to see if all indexes are true values ei strings with content
       if(arr[i1] && arr[i2] && arr[i3]){
@@ -14,12 +16,19 @@ const App = () => {
         if(arr[i1] === arr[i2] && arr[i2] === arr[i3]){
           // all values are either x or o
           alert(`Winner! Player ${arr[i1]} wins!`)
+          setWinner(arr[i1])
         } 
       }
     }
 
   const handleGamePlay = (index) => {
     let newSquares = [...squares];
+     if(squares[index] === null){
+   
+    if (winner) {
+      alert(`Player ${winner.toUpperCase()} has already won`)
+      return
+    } 
     newSquares[index] = turn;
     setSquares(newSquares);
     if (turn === "x") {
@@ -39,12 +48,21 @@ const App = () => {
     // diagonals
    checkPositions(0, 4, 8, newSquares)
    checkPositions(2, 4, 6, newSquares)
+    } else {  
+      alert("square has been played")
+    }
+    let allSpotsTaken = newSquares.every(value => !!value)
+    console.log(allSpotsTaken)
+    if(allSpotsTaken && !winner){
+      alert("Draw")     
+    }
   }
 
    
   return (
     <>
       <h1>Tic Tac Toe</h1>
+      <h3>Player {turn.toUpperCase()} turn</h3>
 
       <div className="board">
         {squares.map((value, index) => (
@@ -56,6 +74,9 @@ const App = () => {
           />
         ))}
       </div>
+      {winner && (
+        <div className="win">"Player {winner.toUpperCase()} Wins!"</div>
+      )}
     </>
   );
 };

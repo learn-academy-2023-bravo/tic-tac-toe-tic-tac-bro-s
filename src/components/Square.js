@@ -2,11 +2,7 @@ import React from 'react'
 
 const Square = ({index, value, handleGamePlay}) => {
   const handleClick = () => {
-    if(value === null){
-      handleGamePlay(index) 
-    } else {
-      alert("square has been played")
-    }
+     handleGamePlay(index) 
   }
   return (
     <div className="square" onClick={handleClick}>{value}</div>

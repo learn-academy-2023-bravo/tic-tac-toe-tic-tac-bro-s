@@ -32,7 +32,14 @@ When creating a project it is important to think about organization of your code
   - repeat for diagnols 
 
 - As a user, I can't continue playing the game after the game has been won.
+
+  - create state to hold winning player
+  - add logic to handleGamePlay, disable gameplay if there is a winning player
+
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
+
+  - 
+
 - As a user, I can click on a restart button that will clear the game board.
 
 ### 🏔 Stretch Goals
