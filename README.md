@@ -26,6 +26,11 @@ When creating a project it is important to think about organization of your code
   - in square component, if value === null then mark the box, else alert("square has been played")
 
 - As a user, when either my partner or I win the game (three squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
+
+  - create a check if all first row values are the same, all second row values are the same, and all third row values are the same.
+  - repeat for columns
+  - repeat for diagnols 
+
 - As a user, I can't continue playing the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.
