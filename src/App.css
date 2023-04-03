@@ -9,7 +9,12 @@ h1 {
 }
 .board {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   width: 350px;
   margin: 0 auto;
+}
+.win {
+  text-align: center;
+  margin: auto;
 }
