@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Square from "./components/Square";
 import "./App.css";
 
@@ -51,13 +51,15 @@ const App = () => {
     } else {  
       alert("square has been played")
     }
-    let allSpotsTaken = newSquares.every(value => !!value)
-    console.log(allSpotsTaken)
+
+  }
+
+  useEffect(() => {
+    let allSpotsTaken = squares.every(value => !!value)
     if(allSpotsTaken && !winner){
       alert("Draw")     
     }
-  }
-
+  }, [squares, winner])
    
   return (
     <>
@@ -77,6 +79,15 @@ const App = () => {
       {winner && (
         <div className="win">"Player {winner.toUpperCase()} Wins!"</div>
       )}
+
+      {/*
+      {(squares.every(value => !!value) && !winner) && (
+      <>
+          {alert('draw')}
+      </>
+      )}
+      */}
+
     </>
   );
 };
