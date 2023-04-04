@@ -1,6 +1,16 @@
 h1 {
-  text-align: center;
-  margin: auto;
+text-align: center;
+margin: auto;
+color: #FFFFFF;
+background: #FFFFFF;
+text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+color: #FFFFFF;
+background: #FFFFFF;
+}
+h3 {
+color: #444444;
+background: #FFFFFF;
+text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
 }
 .square {
   height: 100px;
@@ -57,4 +67,41 @@ h1 {
 .square:nth-child(8) {
   border-right: 1px solid black;
 }
+.win {color: #090909;
+background: #005eff68;
+text-shadow: -5px 5px 0px #f8e804, -10px 10px 0px #039603, -15px 15px 0px #fa0101;
+font-size: 50px;
+font-weight: 900;
+}
+.btn-reset {
+margin: 20px auto;
+font-family: Roboto, sans-serif;
+font-weight: 900;
+font-size: 14px;
+color: #fff;
+background: linear-gradient(75deg, #0066CC 0%, #00a3cc 100%);
+padding: 10px 30px;
+border: 2px solid #0066cc;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 0px 50px;
+transition : 1624ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+text-transform: uppercase;
+}
+
+.btn-reset:hover{
+transition : 1624ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background: linear-gradient(75deg, #0066CC 0%, #00a3cc 100%);
+color: #f0f4f7;
+border: solid 2px #0066cc;
+}
+
+
+
 
