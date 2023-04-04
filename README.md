@@ -38,9 +38,15 @@ When creating a project it is important to think about organization of your code
 
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
 
-  - 
+  - created useEffect to run every time squares and winner changes. Checks to see if all squares are taken and there is no winner, then show alert.
 
 - As a user, I can click on a restart button that will clear the game board.
+
+  - create button with text 'Reset'
+  - when button is clicked call resetGame function
+  - setSquares to array of 9 null values
+  - setWinner to undefined
+  - setTurn to 'x'
 
 ### 🏔 Stretch Goals
 
