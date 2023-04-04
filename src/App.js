@@ -95,19 +95,16 @@ const App = () => {
           />
         ))}
       </div>
+
       {winner && (
         <div className='win'>"Player {winner.toUpperCase()} Wins!"</div>
       )}
 
-      <button onClick={resetGame}>Reset</button>
+      <button className='btn-reset' onClick={resetGame}>Reset</button>
 
-      {/*
-      {(squares.every(value => !!value) && !winner) && (
-      <>
-          {alert('draw')}
-      </>
-      )}
-      */}
+      <footer>
+        <p>Created by Jake & Raymond</p>
+      </footer>
     </>
   )
 }
